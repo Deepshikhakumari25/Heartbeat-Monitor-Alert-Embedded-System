@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "author": "Deepshikha Pankaj",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10.2, "left": 9, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 291.14,
+      "left": 38.63,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -39.7, "left": 297.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -99.6,
+      "left": 13.4,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -109.2,
+      "left": 109.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -53.65,
+      "left": 153.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -34.45,
+      "left": 9.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -199.2,
+      "left": 165,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "pot1:VCC", "uno:5V", "red", [ "v297.6", "h-0.8" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v297.6", "h57.2" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v297.6", "h19.2" ] ],
+    [ "oled1:VCC", "uno:5V", "red", [ "v-105.6", "h76.95" ] ],
+    [ "oled1:GND", "uno:GND.2", "black", [ "v-105.6", "h96" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v-105.6", "h163.5" ] ],
+    [ "oled1:SDA", "uno:A4", "green", [ "v-105.6", "h144.07" ] ],
+    [ "r2:1", "uno:6", "green", [ "v0" ] ],
+    [ "r2:2", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.3", "green", [ "v259.2", "h154" ] ],
+    [ "r1:2", "uno:7", "green", [ "v67.2", "h-10.8" ] ],
+    [ "led2:A", "r1:1", "green", [ "v19.2", "h19.2" ] ],
+    [ "led2:C", "uno:GND.3", "green", [ "v230.4", "h86.8" ] ],
+    [ "bz1:2", "uno:8", "green", [ "v124.8", "h-19.6" ] ],
+    [ "bz1:1", "uno:GND.3", "green", [ "v307.2", "h-9.6" ] ]
+  ],
+  "dependencies": {}
+}
