@@ -1,2 +1,13 @@
-# Heartbeat-Monitor-Alert-Embedded-System
-Embedded systems-based heartbeat monitoring prototype with BPM calculation, OLED display, and threshold-based alerts using Arduino UNO.
+Heartbeat-Monitor-Alert-Embedded-System/
+│
+├── src/
+├── arduino_code/
+├── simulation/
+├── circuit_diagram/
+├── data/
+├── outputs/
+├── screenshots/
+├── reports/
+├── docs/
+├── README.md
+└── .gitignore
